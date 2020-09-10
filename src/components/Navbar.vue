@@ -1,5 +1,5 @@
 <template>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light px-4">
+	<nav class="navbar navbar-expand-md navbar-light bg-light px-4">
 		<router-link to="/" exact class="navbar-brand">
 			<img
 				src="@assets/logo.svg"
@@ -24,61 +24,31 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav ml-auto">
 				<router-link to="/" exact class="nav-item" tag="li">
-					<a
-						class="nav-link d-inline-block"
-						href=""
-						@click.prevent=""
-					>
+					<a class="nav-link d-inline-block" href="#">
 						Home
 						<span class="nav-line"></span>
 					</a>
 				</router-link>
 				<router-link to="/about" class="nav-item" tag="li">
-					<a
-						class="nav-link d-inline-block"
-						href=""
-						@click.prevent=""
-					>
+					<a class="nav-link d-inline-block" href="#">
 						About
 						<span class="nav-line"></span>
 					</a>
 				</router-link>
-				<router-link to="/education" class="nav-item" tag="li">
-					<a
-						class="nav-link d-inline-block"
-						href=""
-						@click.prevent=""
-					>
-						Education
-						<span class="nav-line"></span>
-					</a>
-				</router-link>
 				<router-link to="/work" class="nav-item" tag="li">
-					<a
-						class="nav-link d-inline-block"
-						href=""
-						@click.prevent=""
-					>
+					<a class="nav-link d-inline-block" href="#">
 						Work
 						<span class="nav-line"></span>
 					</a>
 				</router-link>
 				<router-link to="/contact" class="nav-item" tag="li">
-					<a
-						class="nav-link d-inline-block"
-						href=""
-						@click.prevent=""
-					>
+					<a class="nav-link d-inline-block" href="#">
 						Contact
 						<span class="nav-line"></span>
 					</a>
 				</router-link>
 				<router-link to="/blog" class="nav-item" tag="li">
-					<a
-						class="nav-link d-inline-block"
-						href=""
-						@click.prevent=""
-					>
+					<a class="nav-link d-inline-block" href="#">
 						Blog
 						<span class="nav-line"></span>
 					</a>
@@ -89,7 +59,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component, Prop, Vue } from "vue-property-decorator";
 
 @Component
 export default class Navbar extends Vue {}

@@ -2,6 +2,8 @@ import Vue from 'vue';
 import VueRouter, { RouteConfig } from 'vue-router';
 
 import Home from '@views/Home.vue';
+import About from '@views/About.vue';
+import ComingSoon from '@views/ComingSoon.vue';
 
 Vue.use(VueRouter);
 
@@ -10,6 +12,26 @@ const routes: Array<RouteConfig> = [
 		path: '/',
 		name: 'Home',
 		component: Home,
+	},
+	{
+		path: '/about',
+		name: 'About',
+		component: About,
+	},
+	{
+		path: '/contact',
+		name: 'Contact',
+		component: ComingSoon,
+	},
+	{
+		path: '/work',
+		name: 'Work',
+		component: ComingSoon,
+	},
+	{
+		path: '/blog',
+		name: 'Blog',
+		component: ComingSoon,
 	},
 	// {
 	// 	path: '/about',

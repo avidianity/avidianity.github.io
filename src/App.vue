@@ -1,15 +1,15 @@
 <template>
-	<div v-cloak>
+	<div v-cloak style="background-color: #f9f9f9">
 		<navbar></navbar>
 		<router-view></router-view>
 	</div>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
-import AOS from 'aos';
+import { Component, Prop, Vue } from "vue-property-decorator";
+import AOS from "aos";
 
-import Navbar from '@components/Navbar.vue';
+import Navbar from "@components/Navbar.vue";
 
 @Component({
 	components: {
@@ -28,5 +28,5 @@ export default class AppComponent extends Vue {
 </script>
 
 <style lang="scss">
-@import '@styles/bootstrap';
+@import "@styles/bootstrap";
 </style>

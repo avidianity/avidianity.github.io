@@ -1,5 +1,5 @@
 <template>
-	<div style="background-color: #f9f9f9;">
+	<div>
 		<back-to-top></back-to-top>
 		<header class="text-center">
 			<div class="container pt-5">
@@ -83,52 +83,15 @@
 				</div>
 			</div>
 			<div class="text-center my-5">
-				<router-link to="/about" class="btn btn-primary btn-custom">
+				<a
+					href="/about"
+					class="btn btn-primary btn-custom"
+					@click.prevent.stop="goToAboutMe()"
+				>
 					About Me
-				</router-link>
+				</a>
 			</div>
-			<footer class="container-fluid">
-				<div class="row">
-					<div class="col-sm-12 col-md-6 large-left py-3">
-						<div class="text-white">
-							&copy; John Michael Manlupig - 2020
-						</div>
-						<a
-							href="mailto:manlupigjohnmichael@gmail.com"
-							class="text-white"
-						>
-							manlupigjohnmichael@gmail.com
-						</a>
-						<div class="text-white">09169258735</div>
-						<div class="text-white">
-							Lico-an, Barotac Nuevo, Iloilo, Philippines
-						</div>
-					</div>
-					<div class="col-sm-12 col-md-6 large-right py-3">
-						<a
-							href="https://facebook.com/mekkyinblack"
-							class="text-white mx-2"
-							target="__blank"
-						>
-							<i class="fab fa-facebook fa-2x fa-rounded"></i>
-						</a>
-						<a
-							href="https://github.com/avidianity"
-							class="text-white mx-2"
-							target="__blank"
-						>
-							<i class="fab fa-github fa-2x fa-rounded"></i>
-						</a>
-						<a
-							href="https://www.linkedin.com/in/john-michael-manlupig-2216651b2/"
-							class="text-white mx-2"
-							target="__blank"
-						>
-							<i class="fab fa-linkedin-in fa-2x fa-rounded"></i>
-						</a>
-					</div>
-				</div>
-			</footer>
+			<main-footer></main-footer>
 		</section>
 	</div>
 </template>
@@ -136,14 +99,17 @@
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
 import $ from "jquery";
+
 import BackToTop from "@components/BackToTop.vue";
+import MainFooter from "@components/MainFooter.vue";
 
 @Component({
 	components: {
 		BackToTop,
+		MainFooter,
 	},
 })
-export default class extends Vue {
+export default class HomeView extends Vue {
 	windowWidth: number = $(window).width() as number;
 	fadeLargeLeft = "fade-up";
 	fadeLargeRight = "fade-up";
@@ -157,6 +123,10 @@ export default class extends Vue {
 			this.fadeLargeRight =
 				this.windowWidth < 768 ? "fade-up" : "fade-right";
 		});
+	}
+	goToAboutMe() {
+		$("html, body").animate({ scrollTop: 0 }, "slow");
+		this.$router.push("/about");
 	}
 }
 </script>
@@ -185,11 +155,6 @@ section {
 	top: 108%;
 	width: 100%;
 	padding-top: 3rem;
-}
-
-footer {
-	margin-top: 5rem;
-	background-color: #292929;
 }
 
 .title {
@@ -221,14 +186,6 @@ footer {
 	transform: scale(1.1);
 }
 
-.large-left {
-	text-align: left;
-}
-
-.large-right {
-	text-align: left;
-}
-
 .btn-custom {
 	background-color: #2f80ed;
 	border-radius: 25px;
@@ -245,15 +202,6 @@ footer {
 @media (min-width: 768px) {
 	.title {
 		font-size: 40px;
-	}
-
-	.large-left {
-		padding-left: 5rem;
-	}
-
-	.large-right {
-		padding-right: 5rem;
-		text-align: right;
 	}
 
 	.service-card {
