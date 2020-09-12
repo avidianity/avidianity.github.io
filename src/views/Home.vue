@@ -2,7 +2,7 @@
 	<div>
 		<back-to-top></back-to-top>
 		<header class="text-center">
-			<div class="container pt-5">
+			<div class="container pt-5 overflow-hidden">
 				<img
 					src="@assets/500.png"
 					alt=""
@@ -26,13 +26,16 @@
 			</div>
 		</header>
 		<section class="text-center">
-			<h1 :data-aos="fadeLargeRight">Services</h1>
+			<h1 :data-aos="fadeLargeRight" data-aos-duration="1000">
+				Services
+			</h1>
 			<div class="container-fluid overflow-hidden">
 				<div class="row">
 					<div class="col-sm-12 col-lg-4 p-3">
 						<div
 							class="container service-card"
 							:data-aos="fadeLargeRight"
+							data-aos-duration="900"
 						>
 							<img
 								src="@assets/platform.svg"
@@ -49,7 +52,11 @@
 						</div>
 					</div>
 					<div class="col-sm-12 col-lg-4 p-3">
-						<div class="container service-card" data-aos="fade-up">
+						<div
+							class="container service-card"
+							data-aos="fade-up"
+							data-aos-duration="900"
+						>
 							<img
 								src="@assets/data.svg"
 								alt=""
@@ -57,9 +64,8 @@
 							/>
 							<h5>Front-End Development</h5>
 							<p>
-								I design and build user interfaces. I primarily
-								use VueJS. I also use ReactJS in my other
-								projects.
+								I build user interfaces. I primarily use VueJS
+								as well as ReactJS.
 							</p>
 						</div>
 					</div>
@@ -67,6 +73,7 @@
 						<div
 							class="container service-card"
 							:data-aos="fadeLargeLeft"
+							data-aos-duration="900"
 						>
 							<img
 								src="@assets/backend.svg"
@@ -125,7 +132,7 @@ export default class HomeView extends Vue {
 		});
 	}
 	goToAboutMe() {
-		$("html, body").animate({ scrollTop: 0 }, "slow");
+		window.scrollTo(0, 0);
 		this.$router.push("/about");
 	}
 }
@@ -142,7 +149,7 @@ header {
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: absolute;
-	height: 100%;
+	height: calc(100% - 56px);
 	width: 100%;
 	padding-top: 1rem;
 	color: #fff;
@@ -200,6 +207,10 @@ section {
 }
 
 @media (min-width: 768px) {
+	header {
+		height: calc(100% - 58px);
+	}
+
 	.title {
 		font-size: 40px;
 	}

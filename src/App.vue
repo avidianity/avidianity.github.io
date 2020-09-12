@@ -1,5 +1,5 @@
 <template>
-	<div v-cloak style="background-color: #f9f9f9">
+	<div v-cloak>
 		<navbar></navbar>
 		<router-view></router-view>
 	</div>

@@ -23,32 +23,32 @@
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav ml-auto">
-				<router-link to="/" exact class="nav-item" tag="li">
-					<a class="nav-link d-inline-block" href="#">
+				<router-link tag="li" to="/" exact class="nav-item">
+					<a class="nav-link d-inline-block" href="">
 						Home
 						<span class="nav-line"></span>
 					</a>
 				</router-link>
-				<router-link to="/about" class="nav-item" tag="li">
-					<a class="nav-link d-inline-block" href="#">
+				<router-link tag="li" to="/about" class="nav-item">
+					<a class="nav-link d-inline-block" href="">
 						About
 						<span class="nav-line"></span>
 					</a>
 				</router-link>
-				<router-link to="/work" class="nav-item" tag="li">
-					<a class="nav-link d-inline-block" href="#">
+				<router-link tag="li" to="/work" class="nav-item">
+					<a class="nav-link d-inline-block" href="">
 						Work
 						<span class="nav-line"></span>
 					</a>
 				</router-link>
-				<router-link to="/contact" class="nav-item" tag="li">
-					<a class="nav-link d-inline-block" href="#">
+				<router-link tag="li" to="/contact" class="nav-item">
+					<a class="nav-link d-inline-block" href="">
 						Contact
 						<span class="nav-line"></span>
 					</a>
 				</router-link>
-				<router-link to="/blog" class="nav-item" tag="li">
-					<a class="nav-link d-inline-block" href="#">
+				<router-link tag="li" to="/blog" class="nav-item">
+					<a class="nav-link d-inline-block" href="">
 						Blog
 						<span class="nav-line"></span>
 					</a>
@@ -60,6 +60,7 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
+import $ from "jquery";
 
 @Component
 export default class Navbar extends Vue {}

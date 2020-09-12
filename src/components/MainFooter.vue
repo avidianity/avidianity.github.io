@@ -2,20 +2,18 @@
 	<footer class="container-fluid">
 		<div class="row">
 			<div class="col-sm-12 col-md-6 large-left py-3">
-				<div class="text-white">
-					&copy; John Michael Manlupig - 2020
-				</div>
 				<a
 					href="mailto:manlupigjohnmichael@gmail.com"
 					class="text-white"
 				>
 					manlupigjohnmichael@gmail.com
 				</a>
-				<a href="tel:+639169258735" class="text-white d-block"
-					>09169258735</a
-				>
+				<a href="tel:+639169258735" class="text-white d-block">
+					09169258735
+				</a>
+				<div class="text-white">John Michael Manlupig &copy;2020</div>
 				<div class="text-white">
-					Lico-an, Barotac Nuevo, Iloilo, Philippines
+					Powered by: <i class="fab fa-vuejs" title="VueJS"></i>
 				</div>
 			</div>
 			<div class="col-sm-12 col-md-6 large-right py-3">
