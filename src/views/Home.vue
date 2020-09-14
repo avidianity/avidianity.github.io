@@ -144,8 +144,8 @@ body {
 }
 
 header {
-	background-image: url("../assets/bg.png");
 	background-position: center center;
+	background-image: url("../assets/bg.png");
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: absolute;
