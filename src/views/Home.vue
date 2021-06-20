@@ -3,18 +3,8 @@
 		<back-to-top></back-to-top>
 		<header class="text-center">
 			<div class="container pt-5 overflow-hidden">
-				<img
-					src="@assets/500.png"
-					alt=""
-					class="profile"
-					data-aos="fade-right"
-					data-aos-duration="1000"
-				/>
-				<h2
-					class="mt-3 title"
-					data-aos="fade-left"
-					data-aos-duration="1200"
-				>
+				<img src="@assets/500.png" alt="" class="profile" data-aos="fade-right" data-aos-duration="1000" />
+				<h2 class="mt-3 title" data-aos="fade-left" data-aos-duration="1200">
 					Hi!
 				</h2>
 				<h2 class="title" data-aos="fade-left" data-aos-duration="1200">
@@ -32,69 +22,37 @@
 			<div class="container-fluid overflow-hidden">
 				<div class="row">
 					<div class="col-sm-12 col-lg-4 p-3">
-						<div
-							class="container service-card"
-							:data-aos="fadeLargeRight"
-							data-aos-duration="900"
-						>
-							<img
-								src="@assets/platform.svg"
-								alt=""
-								class="service-card-logo"
-							/>
+						<div class="container service-card" :data-aos="fadeLargeRight" data-aos-duration="900">
+							<img src="@assets/platform.svg" alt="" class="service-card-logo" />
 							<h5>Responsive / Cross-Platform</h5>
 							<p>
-								I make websites and web apps that work on any
-								platform and device. Whether you’re viewing it
-								on a desktop, phone or tablet. I make sure it
-								will look beautiful!
+								I make websites and web apps that work on any platform and device. Whether you’re viewing it on a desktop,
+								phone or tablet. I make sure it will look beautiful!
 							</p>
 						</div>
 					</div>
 					<div class="col-sm-12 col-lg-4 p-3">
-						<div
-							class="container service-card"
-							data-aos="fade-up"
-							data-aos-duration="900"
-						>
-							<img
-								src="@assets/data.svg"
-								alt=""
-								class="service-card-logo"
-							/>
+						<div class="container service-card" data-aos="fade-up" data-aos-duration="900">
+							<img src="@assets/data.svg" alt="" class="service-card-logo" />
 							<h5>Front-End Development</h5>
 							<p>
-								I build user interfaces. I primarily use VueJS
-								as well as ReactJS.
+								I build user interfaces. I primarily use VueJS as well as ReactJS.
 							</p>
 						</div>
 					</div>
 					<div class="col-sm-12 col-lg-4 p-3">
-						<div
-							class="container service-card"
-							:data-aos="fadeLargeLeft"
-							data-aos-duration="900"
-						>
-							<img
-								src="@assets/backend.svg"
-								alt=""
-								class="service-card-logo"
-							/>
+						<div class="container service-card" :data-aos="fadeLargeLeft" data-aos-duration="900">
+							<img src="@assets/backend.svg" alt="" class="service-card-logo" />
 							<h5>Back-End Development</h5>
 							<p>
-								I create database designs, data models, REST
-								APIs and other back-end related work.
+								I create database designs, data models, REST APIs and other back-end related work.
 							</p>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="text-center my-5">
-				<a
-					href="/about"
-					class="btn btn-primary btn-custom"
-					@click.prevent.stop="goToAboutMe()"
-				>
+				<a href="/about" class="btn btn-primary btn-custom" @click.prevent.stop="goToAboutMe()">
 					About Me
 				</a>
 			</div>
@@ -104,11 +62,11 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator";
-import $ from "jquery";
+import { Component, Vue } from 'vue-property-decorator';
+import $ from 'jquery';
 
-import BackToTop from "@components/BackToTop.vue";
-import MainFooter from "@components/MainFooter.vue";
+import BackToTop from '@components/BackToTop.vue';
+import MainFooter from '@components/MainFooter.vue';
 
 @Component({
 	components: {
@@ -117,23 +75,21 @@ import MainFooter from "@components/MainFooter.vue";
 	},
 })
 export default class HomeView extends Vue {
-	windowWidth: number = $(window).width() as number;
-	fadeLargeLeft = "fade-up";
-	fadeLargeRight = "fade-up";
+	windowWidth: number = $(window).width()!;
+	fadeLargeLeft = 'fade-up';
+	fadeLargeRight = 'fade-up';
 	created() {
-		this.fadeLargeLeft = this.windowWidth < 768 ? "fade-up" : "fade-left";
-		this.fadeLargeRight = this.windowWidth < 768 ? "fade-up" : "fade-right";
-		$(window).on("resize", (e) => {
-			this.windowWidth = $(window).width() as number;
-			this.fadeLargeLeft =
-				this.windowWidth < 768 ? "fade-up" : "fade-left";
-			this.fadeLargeRight =
-				this.windowWidth < 768 ? "fade-up" : "fade-right";
+		this.fadeLargeLeft = this.windowWidth < 768 ? 'fade-up' : 'fade-left';
+		this.fadeLargeRight = this.windowWidth < 768 ? 'fade-up' : 'fade-right';
+		$(window).on('resize', (e) => {
+			this.windowWidth = $(window).width()!;
+			this.fadeLargeLeft = this.windowWidth < 768 ? 'fade-up' : 'fade-left';
+			this.fadeLargeRight = this.windowWidth < 768 ? 'fade-up' : 'fade-right';
 		});
 	}
 	goToAboutMe() {
 		window.scrollTo(0, 0);
-		this.$router.push("/about");
+		this.$router.push('/about');
 	}
 }
 </script>
@@ -145,7 +101,7 @@ body {
 
 header {
 	background-position: center center;
-	background-image: url("../assets/bg.png");
+	background-image: url('../assets/bg.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: absolute;
@@ -153,7 +109,7 @@ header {
 	width: 100%;
 	padding-top: 1rem;
 	color: #fff;
-	font-family: "Lato";
+	font-family: 'Lato';
 	font-weight: 200;
 }
 

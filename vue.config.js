@@ -1,5 +1,8 @@
 const path = require('path');
 
+/**
+ * @type {import('@vue/cli-service').ProjectOptions}
+ */
 module.exports = {
 	configureWebpack: {
 		resolve: {
@@ -14,4 +17,5 @@ module.exports = {
 			},
 		},
 	},
+	publicPath: process.env.NODE_ENV === 'production' ? 'https://avidianity.github.io' : '/',
 };
