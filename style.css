@@ -1,0 +1,78 @@
+* {
+	font-family: 'Nunito Sans' !important;
+	font-weight: 300 !important;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.font-size-14 {
+	font-size: 14px;
+}
+
+@media screen and (max-width: 575px) {
+	.text-center-sm {
+		text-align: center !important;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.text-center-md {
+		text-align: center !important;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.text-center-lg {
+		text-align: center !important;
+	}
+}
+
+.profile {
+	height: 140px;
+	width: 140px;
+}
+
+.tags {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+.tags:last-child {
+	margin-bottom: -0.5rem;
+}
+
+.tag:not(body) {
+	align-items: center;
+	background-color: #f5f5f5;
+	border-radius: 0;
+	color: #4a4a4a;
+	display: inline-flex;
+	font-size: 0.75rem;
+	height: 2em;
+	justify-content: center;
+	line-height: 1.5;
+	padding-left: 0.75em;
+	padding-right: 0.75em;
+	white-space: nowrap;
+}
+
+.tag:not(body).is-info.is-light {
+	background-color: #eef6fc;
+	color: #1d72aa;
+}
+
+.tags .tag:not(:last-child) {
+	margin-right: 0.5rem;
+}
+
+.tags .tag {
+	margin-bottom: 0.5rem;
+}
+
+.tag:not(body).is-rounded {
+	border-radius: 290486px;
+}
